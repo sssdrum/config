@@ -1,6 +1,7 @@
 # Aliases
 alias h="history"
 alias c="clear"
+alias e="exit"
 alias nv="nvim"
 alias lg="lazygit"
 
