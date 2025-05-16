@@ -1,7 +1,7 @@
 return {
   "loctvl842/monokai-pro.nvim",
+
   config = function()
-    print("Hello")
     require("monokai-pro").setup({
       transparent_background = false,
       terminal_colors = true,
@@ -50,13 +50,16 @@ return {
         },
       },
 
-      ---@param cs Colorscheme
-      ---@param p ColorschemeOptions
-      ---@param Config MonokaiProOptions
-      ---@param hp Helper
-      override = function(cs, p, Config, hp)
-        -- override logic goes here
-      end,
+      -- ---@param cs Colorscheme
+      -- ---@param p ColorschemeOptions
+      -- ---@param Config MonokaiProOptions
+      -- ---@param hp Helper
+      -- override = function(cs, p, Config, hp)
+      --   -- override logic goes here
+      --   --
+      -- end,
     })
+
+    vim.cmd("colorscheme monokai-pro") -- Make sure to actually enable the colorscheme
   end,
 }

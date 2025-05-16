@@ -1,10 +1,24 @@
 -- syntax highlithing
 return {
   "nvim-treesitter/nvim-treesitter",
+  dependencies = { "OXY2DEV/markview.nvim" },
   config = function()
     require("nvim-treesitter.configs").setup({
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
-      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "python", "javascript", "html", "css", "go" },
+      ensure_installed = {
+        "c",
+        "lua",
+        "vim",
+        "vimdoc",
+        "query",
+        "python",
+        "javascript",
+        "html",
+        "css",
+        "go",
+        "markdown",
+        "markdown_inline",
+      },
 
       -- Install parsers synchronously (only applied to `ensure_installed`)
       sync_install = false,
