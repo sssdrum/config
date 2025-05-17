@@ -19,7 +19,7 @@
         "mpd",
         "idle_inhibitor",
         "pulseaudio",
-        "bluetooth",
+        "custom/bluetooth",
         "custom/network",
         "power-profiles-daemon",
         "cpu",
@@ -163,18 +163,16 @@
       "exec": "~/.config/waybar/scripts/network.sh",
       "format": "{text}",
       "return-type": "json",
-      "interval": 10,
+      "interval": 5,
       "tooltip": true,
       "on-click": "kitty iwctl"
     },
-    "bluetooth": {
-        "format": " ",               // Shows Bluetooth icon when enabled
-        "format-disabled": " ",      // Shows Bluetooth icon with "disabled" styling
-        "format-connected": " {num_connections}",  // Shows icon + number of connections 
-        "tooltip-format": "{controller_alias}\n{num_connections} connected",
-        "tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}",
-        "on-click": "kitty bluetoothctl"
+    "custom/bluetooth": {
+      "exec": "~/.config/waybar/scripts/bluetooth.sh",
+      "return-type": "json",
+      "format": "{text}",               // Shows Bluetooth icon when enabled
+      "interval": 5,
+      "on-click": "kitty bluetoothctl"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
