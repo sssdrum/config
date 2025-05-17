@@ -28,9 +28,18 @@ window#waybar {
     background-color: #f9e2af;
 }
 
+#workspaces button.urgent {
+    background-color: #f38ba8; /* Catppuccin red (Rosewater) */
+}
+
+#workspaces button.urgent label {
+    color: #1e1e2e;
+}
+
 #workspaces button.active label {
     color: #1e1e2e;
 }
+
 
 #clock,
 #cpu,
