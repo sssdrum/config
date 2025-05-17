@@ -24,6 +24,8 @@ opt.smartcase = true
 opt.termguicolors = true
 opt.background = "dark"
 
+opt.scrolloff = 8
+
 -- clipboard
 opt.clipboard:append("unnamedplus")
 
