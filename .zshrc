@@ -18,3 +18,10 @@ eval "$(starship init zsh)"
 
 # Initialize neofetch
 neofetch
+
+# bun completions
+[ -s "/home/luigidp/.bun/_bun" ] && source "/home/luigidp/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
