@@ -1,3 +1,10 @@
+# bun completions
+[ -s "/home/luigidp/.bun/_bun" ] && source "/home/luigidp/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 export GOPATH=$HOME/go
 export PATH="$PATH:$HOME/go/bin"
 
@@ -5,6 +12,7 @@ export PATH="$PATH:$HOME/go/bin"
 alias h="history"
 alias c="clear"
 alias e="exit"
+alias py="python3"
 alias nv="nvim"
 alias lzg="lazygit"
 alias lzd="sudo lazydocker"
@@ -17,12 +25,5 @@ alias tls="tmux ls"
 # Initialize starship
 eval "$(starship init zsh)"
 
-# Initialize neofetch
-neofetch
-
-# bun completions
-[ -s "/home/luigidp/.bun/_bun" ] && source "/home/luigidp/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# Initialize fastfetch
+fastfetch
