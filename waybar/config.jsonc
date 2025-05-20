@@ -8,9 +8,7 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/mode",
-        "hyprland/scratchpad",
-        "custom/media"
+        "custom/spotify"
     ],
     "modules-center": [
         "hyprland/window"
@@ -31,7 +29,6 @@
         "battery",
         "battery#bat2",
         "clock",
-        "tray",
         "custom/power"
     ],
     //Modules configuration
@@ -102,8 +99,6 @@
             "activated": "",
             "deactivated": ""
         }
-    },
-    "tray": {
     },
     "clock": {
         // "timezone": "America/New_York",
@@ -193,18 +188,6 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
     "custom/power": {
         "format" : "⏻ ",
 		"tooltip": false,
@@ -216,5 +199,12 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+    },
+    "custom/spotify": {
+        "exec": "~/.config/waybar/scripts/spotify.sh",
+        "return-type": "json",
+        "format": "{text}",
+        "interval": 1,
+        "on-click": "playerctl --player=spotify play-pause"
     }
 }
