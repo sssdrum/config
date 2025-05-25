@@ -167,7 +167,7 @@
       "return-type": "json",
       "format": "{text}",               // Shows Bluetooth icon when enabled
       "interval": 5,
-      "on-click": "kitty bluetoothctl"
+      "on-click": "kitty bluetuith"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
