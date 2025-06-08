@@ -9,8 +9,10 @@ require("lsp.common").setup()
 vim.lsp.config["luals"] = require("lsp.luals")
 vim.lsp.config["bashls"] = require("lsp.bashls")
 vim.lsp.config["tstools"] = require("lsp.tstools")
+vim.lsp.config["gopls"] = require("lsp.gopls")
 
 -- Enable the servers
 vim.lsp.enable("luals")
 vim.lsp.enable("bashls")
 vim.lsp.enable("tstools")
+vim.lsp.enable("gopls")
