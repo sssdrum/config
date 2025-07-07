@@ -1,7 +1,6 @@
 -- syntax highlithing
 return {
   "nvim-treesitter/nvim-treesitter",
-  dependencies = { "OXY2DEV/markview.nvim" },
   config = function()
     require("nvim-treesitter.configs").setup({
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
